@@ -16,10 +16,12 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="flex flex-col min-h-screen ">
+    <div className="flex flex-col">
       <header className="px-4 lg:px-6 h-14 flex items-center">
         <Link className="flex items-center justify-center" to={"/"}>
-          <span className="ml-2 text-[#76853e]">Resume Builder</span>
+          <span className="font-semibold ml-2 text-[#76853e]">
+            Resume Builder
+          </span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Link
@@ -56,9 +58,9 @@ export default function Index() {
               </p>
             </div>
             <div className="space-x-4">
-              <Button className="bg-white text-black hover:bg-gray-200">
+              <Button className="bg-white text-primary hover:bg-gray-200">
                 Comece agora
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="text-primary ml-2 h-4 w-4" />
               </Button>
               <Button
                 variant="outline"
@@ -72,9 +74,9 @@ export default function Index() {
 
         <section
           id="features"
-          className="w-full py-12 md:py-24 lg:py-32 bg-gray-100"
+          className="w-full flex items-center md:py-24 lg:py-32 bg-gray-100"
         >
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto w-full px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">
               Recursos Principais
             </h2>
@@ -109,7 +111,7 @@ export default function Index() {
         </section>
 
         <section id="how-it-works" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">
               Como Funciona
             </h2>
@@ -148,7 +150,7 @@ export default function Index() {
         </section>
 
         <section className="w-full py-12 md:py-24 lg:py-32 bg-primary text-white">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto  px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                 Pronto para impulsionar sua carreira?
