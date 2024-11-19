@@ -2,6 +2,7 @@ import type { MetaFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
 import { ArrowRight, CheckCircle, Users, Zap } from "lucide-react";
 import { Button } from "~/components/ui/button";
+import { motion } from "motion/react";
 
 export const meta: MetaFunction = () => {
   return [
@@ -15,6 +16,17 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
+  const defaultAnimation = (duration: number) => {
+    return {
+      initial: { opacity: 0 },
+      animate: { opacity: 1 },
+      transition: { duration },
+    };
+  };
+
+  const textAnimation = defaultAnimation(2);
+  const buttonAnimation = defaultAnimation(4);
+
   return (
     <div className="flex flex-col">
       <header className="px-4 lg:px-6 h-14 flex items-center">
@@ -49,9 +61,12 @@ export default function Index() {
         <section className="w-full flex items-center py-12 md:py-24 lg:py-32 xl:py-72 bg-gradient-to-b from-[#76853e] to-[#53631d]">
           <div className="w-full px-4 md:px-6 flex flex-col items-center space-y-4 text-center">
             <div className="w-full space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white">
+              <motion.h1
+                {...textAnimation}
+                className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white"
+              >
                 Crie currículos profissionais em minutos
-              </h1>
+              </motion.h1>
               <p className=" text-blue-100 md:text-xl">
                 Destaque-se no mercado de trabalho com currículos personalizados
                 e de alta qualidade. Fácil, rápido e eficiente.
