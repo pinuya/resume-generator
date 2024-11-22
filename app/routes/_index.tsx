@@ -38,29 +38,37 @@ export default function Index() {
   return (
     <div className="flex flex-col">
       <header className="px-4 lg:px-6 h-14 flex items-center">
-        <Link className="flex items-center justify-center" to={"/"}>
-          <span className="font-semibold ml-2 text-[#76853e]">
-            Resume Builder
-          </span>
-        </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Link
             className="text-sm font-medium hover:underline hover:text-[#76853e] underline-offset-4"
-            to={"/"}
+            to={"#features"}
           >
             Recursos
           </Link>
           <Link
             className="text-sm font-medium hover:underline hover:text-[#76853e] underline-offset-4"
-            to={"/"}
+            to={"#how-it-works"}
           >
             Como Funciona
           </Link>
           <Link
             className="text-sm font-medium hover:underline hover:text-[#76853e] underline-offset-4"
-            to={"/"}
+            to={"#testemunhas"}
           >
-            Contact
+            Testemunhas
+          </Link>
+          <Link
+            className="text-sm font-medium hover:underline hover:text-[#76853e] underline-offset-4"
+            to={"#plans"}
+          >
+            Planos
+          </Link>
+
+          <Link
+            className="text-sm font-medium hover:underline hover:text-[#76853e] underline-offset-4"
+            to={"#cta"}
+          >
+            Comece Agora
           </Link>
         </nav>
       </header>
@@ -138,7 +146,7 @@ export default function Index() {
         </section>
 
         {/* COMO FUNCIONA */}
-        <section className="py-16 bg-muted">
+        <section className="py-16 bg-muted" id="how-it-works">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">
               Como funciona
@@ -209,7 +217,7 @@ export default function Index() {
         </section>
 
         {/* TESTEMUNHAS */}
-        <section className="py-16 bg-background">
+        <section className="py-16 bg-background" id="testemunhas">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">
               O que nossos usuários dizem
@@ -256,7 +264,7 @@ export default function Index() {
         </section>
 
         {/* PLANOS */}
-        <section className="py-16 bg-muted">
+        <section className="py-16 bg-muted" id="plans">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">
               Planos e preços
@@ -328,7 +336,10 @@ export default function Index() {
         </section>
 
         {/* CTA SECTION */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-primary text-white">
+        <section
+          className="w-full py-12 md:py-24 lg:py-32 bg-primary text-white"
+          id="cta"
+        >
           <div className="px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
