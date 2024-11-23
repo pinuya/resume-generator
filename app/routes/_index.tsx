@@ -37,8 +37,8 @@ export default function Index() {
 
   return (
     <div className="flex flex-col">
-      <header className="px-4 lg:px-6 h-14 flex items-center">
-        <nav className="ml-auto flex gap-4 sm:gap-6">
+      <header className="px-4 lg:px-6 h-14 flex items-center justify-center">
+        <nav className=" flex gap-4 sm:gap-6">
           <Link
             className="text-sm font-medium hover:underline hover:text-[#76853e] underline-offset-4"
             to={"#features"}
@@ -73,7 +73,7 @@ export default function Index() {
         </nav>
       </header>
 
-      <main className="flex-1">
+      <main className="flex-1 py-2">
         <section className="w-full flex items-center py-12 md:py-24 lg:py-32 xl:py-72 bg-gradient-to-b from-[#76853e] to-[#53631d]">
           <div className="w-full px-4 md:px-6 flex flex-col items-center space-y-4 text-center">
             <div className="w-full space-y-2">
